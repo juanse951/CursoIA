@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "17be20d9-36c7-4eb2-8eff-b2220ea5a574",
+		"name": "Voll Med Agenda Consultas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mostrar próximas consultas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consultas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marcar consulta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmEuc291emFAdm9sbC5tZWQiLCJpc3MiOiJBUEkgVm9sbC5tZWQiLCJleHAiOjE2ODQ0NDk3ODB9.X1YT9nk94dLmHo-TdsF1EvVjTpd-xOe-j61-ch91Yrk"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idPaciente\": 1,\n    \"idMedico\": 1,\n\t\"fecha\": \"2025-10-11T10:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/consultas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
